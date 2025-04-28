@@ -21,25 +21,25 @@ const codingProfiles = {
         {
           title: "LeetCode",
           path: "/leetcode.png",
-          link: "https://leetcode.com/yourusername/",
+          link: "https://leetcode.com/u/harishravikumar2005/",
           description: "Solved 360+ problems | Max Rating: 1,576 | Global rank: 186,712"
         },
         {
           title: "GeeksForGeeks",
           path: "/gfg.png",
-          link: "https://www.geeksforgeeks.org/yourusername/",
+          link: "https://www.geeksforgeeks.org/user/harishr2aofi/",
           description: "Solved 55+ problems | Institute Rank: 96"
         },
         {
           title: "CodeChef",
           path: "/codechef.png",
-          link: "https://www.codechef.com/users/yourusername/",
+          link: "https://www.codechef.com/users/harishr2005",
           description: "Max Rating: 1149 | Global Rank: 97988"
         },
         {
           title: "SkillRack",
           path: "/skillrack.png",
-          link: "https://www.skillrack.com/profile/yourusername/",
+          link: "https://www.skillrack.com/faces/resume.xhtml?id=483833&key=41f6d170fe24aa40df0de65a6ea882d3a958a7eb",
           description: "Solved 170+ problems | Top 18th in Contest - College level | 53+ Bronzes"
         },
       ],
@@ -49,19 +49,19 @@ const codingProfiles = {
         {
           title: "GitHub",
           path: "/github.png",
-          link: "https://github.com/yourusername/",
+          link: "https://github.com/Harish24-10-2005",
           description: "Open Source Contributions | Personal Projects"
         },
         {
           title: "HackerRank",
           path: "/hackerrank.png",
-          link: "https://www.hackerrank.com/yourusername/",
-          description: "5 Star Problem Solver | Algorithms & Data Structures"
+          link: "https://www.hackerrank.com/profile/harish_r2023ai_1",
+          description: "4 Star Problem Solver | Algorithms & Data Structures"
         },
         {
           title: "Codeforces",
           path: "/codeforces.png",
-          link: "https://codeforces.com/profile/yourusername/",
+          link: "https://codeforces.com/profile/harishr2005",
           description: "Competitive Programming | Algorithms Expert"
         },
       ],
