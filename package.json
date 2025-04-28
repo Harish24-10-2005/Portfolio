@@ -1,0 +1,74 @@
+{
+  "name": "harish-r-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "author": {
+    "name": "Harish R",
+    "email": "harishravikumar24@gamil.com",
+    "url": "https://github.com/harishr"
+  },
+  "description": "Harish R is an AI Engineer and Data Scientist with expertise in AI agents, machine learning, computer vision, and MERN stack development.",
+  "keywords": [
+    "ai-engineer",
+    "data-scientist",
+    "machine-learning",
+    "deep-learning",
+    "ai-agents",
+    "computer-vision",
+    "mern-stack",
+    "python",
+    "react",
+    "next",
+    "nextjs",
+    "educational-ai",
+    "data-analysis",
+    "motion-capture",
+    "langchain",
+    "phidata",
+    "portfolio",
+    "harish-r",
+    "ai-and-data-science",
+    "framer-motion",
+    "3d-website",
+    "sri-eshwar-college"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/harishr/portfolio.git"
+  },
+  "homepage": "https://harish-r.com",
+  "bugs": {
+    "url": "https://github.com/harishr/portfolio/issues",
+    "email": "harishravikumar24@gamil.com"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@formspree/react": "^3.0.0",
+    "@next/font": "^13.4.4",
+    "framer-motion": "^10.18.0",
+    "next": "14.1.1",
+    "react": "18.2.0",
+    "react-countup": "^6.4.2",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.12.0",
+    "react-simple-typewriter": "^5.0.1",
+    "react-tsparticles": "^2.9.3",
+    "swiper": "^9.4.0",
+    "tailwind-scrollbar": "^3.0.4",
+    "tsparticles": "^2.9.3"
+  },
+  "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.10.7",
+    "autoprefixer": "^10.4.14",
+    "eslint": "8.41.0",
+    "eslint-config-next": "13.4.3",
+    "postcss": "^8.4.23",
+    "tailwindcss": "^3.3.2"
+  }
+}
