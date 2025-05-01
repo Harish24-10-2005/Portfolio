@@ -6,7 +6,7 @@ const ProjectsBtn = () => {
   return (
     <div className="mx-auto xl:mx-0">
       <Link
-        href="https://drive.google.com/uc?export=download&id=13VB5fT6nLuCbmiTs-SmklPVAa46-la72"
+        href="https://drive.google.com/file/d/18zFkxKWXH9ZU8Cedy3pXLz5e60ZIsRvr/view?usp=sharing"
         target="_blank"
         rel="noopener noreferrer"
         download
