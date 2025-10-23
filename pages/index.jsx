@@ -25,7 +25,7 @@ const Home = () => {
             Hi, I'm Harish <br />
             <span className="text-accent">
               <Typewriter
-                words={['19', 'AI Engineer', 'Data Scientist', 'Passionate Entrepreneur','Dreaming Big','I\'m invincible','Technologist','Redefining Reality']}
+                words={['19', 'AI Engineer', 'Data Scientist', 'Passionate in Ai Field','Dreaming Big','I\'m invincible','Technologist','Redefining Reality']}
                 loop={0}
                 cursor
                 cursorStyle="|"
