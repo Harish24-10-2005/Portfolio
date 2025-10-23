@@ -172,7 +172,7 @@ const About = () => {
             animate="show"
             className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
           >
-I’m an AI and Data Science enthusiast and the founder of Horix AI—an agentic platform under development—driven to innovate with autonomous systems and smart tech solutions. With hands-on expertise in the MERN stack, machine learning, and AI, I’ve developed a patented 3D motion-capture pipeline, AI-driven video-generation tools, and intelligent smart-farming systems. I thrive on building impactful products that blend deep technical skills with entrepreneurial vision.          </motion.p>
+I’m an AI and Data Science enthusiast and Developing a project Horix AI—an agentic platform under development—driven to innovate with autonomous systems and smart tech solutions. With hands-on expertise in the MERN stack, machine learning, and AI, I’ve developed a patented 3D motion-capture pipeline, AI-driven video-generation tools, and intelligent smart-farming systems. I thrive on building impactful products that blend deep technical skills with entrepreneurial vision.          </motion.p>
 
           {/* counters */}
           <motion.div
@@ -183,17 +183,11 @@ I’m an AI and Data Science enthusiast and the founder of Horix AI—an agentic
           >
             <div className="flex flex-1 xl:gap-x-6">
             <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                CEO & Founder
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                Horix Ai
-                </div>
               </div>
               {/* leetcode */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={360} duration={5} />+
+                  <CountUp start={0} end={600} duration={5} />+
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Leetcode Problems Solved
@@ -213,7 +207,7 @@ I’m an AI and Data Science enthusiast and the founder of Horix AI—an agentic
               {/* skillrack */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={1576} duration={5} />+
+                  <CountUp start={0} end={1700} duration={5} />+
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Contest Rating in leetcode
