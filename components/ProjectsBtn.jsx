@@ -6,10 +6,9 @@ const ProjectsBtn = () => {
   return (
     <div className="mx-auto xl:mx-0">
       <Link
-        href="https://drive.google.com/file/d/1Oas4SAg_GeT3b1NSeFZUrI4_MdntVPRz/view?usp=sharing"
+        href="https://drive.google.com/drive/folders/1VhDfzStVeGvW1Z1ikYAOJVsOz53jWyIA?usp=sharing"
         target="_blank"
         rel="noopener noreferrer"
-        download
         className="relative w-[185px] h-[185px] flex justify-center items-center bg-circleStar bg-cover bg-center bg-no-repeat group"
       >
         <Image
