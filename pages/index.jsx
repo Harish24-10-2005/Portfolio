@@ -25,7 +25,7 @@ const Home = () => {
                 words={[
                   "20",
                   "AI Engineer",
-                  "Data Engineering Intern",
+                  "Data Scientist",
                   "LeetCode Knight (1866)",
                   "Building Multi-Agent Systems",
                   "FastAPI + LangGraph Builder",
