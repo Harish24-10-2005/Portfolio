@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Typewriter } from "react-simple-typewriter"; // <-- added import
+import { Typewriter } from "react-simple-typewriter";
 
 import ParticlesContainer from "../components/ParticlesContainer";
 import ProjectsBtn from "../components/ProjectsBtn";
@@ -10,11 +10,8 @@ import { fadeIn } from "../variants";
 const Home = () => {
   return (
     <div className="bg-primary/60 h-full">
-      {/* text */}
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
         <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
-          
-          {/* title */}
           <motion.h1
             variants={fadeIn("down", 0.2)}
             initial="hidden"
@@ -22,33 +19,59 @@ const Home = () => {
             exit="hidden"
             className="h1"
           >
-            Hi, I'm Harish <br />
+            Hi, I&apos;m Harish <br />
             <span className="text-accent">
               <Typewriter
-                words={['19', 'AI Engineer', 'Data Scientist', 'Passionate in Ai Field','Dreaming Big','I\'m invincible','Technologist','Redefining Reality']}
+                words={[
+                  "20",
+                  "AI Engineer",
+                  "Data Engineering Intern",
+                  "LeetCode Knight (1866)",
+                  "Building Multi-Agent Systems",
+                  "FastAPI + LangGraph Builder",
+                ]}
                 loop={0}
                 cursor
                 cursorStyle="|"
                 typeSpeed={70}
-                deleteSpeed={50}
+                deleteSpeed={45}
                 delaySpeed={1500}
               />
             </span>
           </motion.h1>
 
-          {/* subtitle */}
           <motion.p
             variants={fadeIn("down", 0.3)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 text-gray-300"
+            className="max-w-sm xl:max-w-2xl mx-auto xl:mx-0 mb-8 xl:mb-10 text-gray-200"
           >
-            I build autonomous AI agents that turn ideas into scalable, impactful solutions.
-            Bridging technology and business with passion and innovation.
+            AI & Data Science undergrad focused on recruiter-ready, production-grade systems: autonomous job
+            application pipelines, agentic YouTube automation, and real-time big-data analytics with Kafka,
+            Spark, and Airflow.
           </motion.p>
 
-          {/* btn */}
+          <motion.div
+            variants={fadeIn("down", 0.35)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="mx-auto xl:mx-0 mb-10 grid grid-cols-2 xl:grid-cols-4 gap-3 max-w-3xl"
+          >
+            {[
+              { label: "LeetCode", value: "1866" },
+              { label: "Problems Solved", value: "800+" },
+              { label: "CGPA", value: "8.34" },
+              { label: "Automation Gain", value: "95%" },
+            ].map((item) => (
+              <div key={item.label} className="rounded-xl bg-white/5 border border-white/10 p-3 backdrop-blur-sm">
+                <div className="text-accent font-bold text-xl">{item.value}</div>
+                <div className="text-xs uppercase tracking-wider text-white/80">{item.label}</div>
+              </div>
+            ))}
+          </motion.div>
+
           <div className="flex justify-center xl:hidden relative">
             <ProjectsBtn />
           </div>
@@ -61,24 +84,18 @@ const Home = () => {
           >
             <ProjectsBtn />
           </motion.div>
-
         </div>
       </div>
 
-      {/* image */}
       <div className="w-[1280px] h-full absolute right-0 bottom-0">
-        
-        {/* bg img */}
         <div
           role="img"
           className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0"
           aria-hidden
         />
 
-        {/* particles */}
         <ParticlesContainer />
 
-        {/* avatar */}
         <motion.div
           variants={fadeIn("up", 0.5)}
           initial="hidden"
@@ -89,7 +106,6 @@ const Home = () => {
         >
           <Avatar />
         </motion.div>
-
       </div>
     </div>
   );
