@@ -1,148 +1,87 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
 import CountUp from "react-countup";
+import { FaDocker, FaPython, FaReact } from "react-icons/fa";
 import {
-  FaPython,
-  FaReact,
-  FaNodeJs,
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaGithub,
-  FaDatabase
-} from "react-icons/fa";
-import {
-  SiTensorflow,
-  SiPytorch,
+  SiFastapi,
   SiMongodb,
   SiMysql,
-  SiExpress,
-  SiFastapi,
-  SiJupyter,
-  SiPowerbi,
-  SiTableau
+  SiPytorch,
+  SiTensorflow,
 } from "react-icons/si";
 
 import Avatar from "../../components/Avatar";
 import Circles from "../../components/Circles";
 import { fadeIn } from "../../variants";
 
-//  data
-export const aboutData = [
+const highlights = [
   {
-    title: "skills",
-    info: [
-      {
-        title: "Programming",
-        icons: [
-          FaPython,
-          FaJs,
-          FaHtml5,
-          FaCss3,
-          FaReact,
-          FaNodeJs
-        ],
-      },
-      {
-        title: "Data Science & ML",
-        icons: [SiTensorflow, SiPytorch, SiJupyter, SiPowerbi, SiTableau],
-      },
-      {
-        title: "Backend & Database",
-        icons: [SiFastapi, SiExpress, SiMongodb, SiMysql, FaDatabase],
-      },
-    ],
+    title: "Data Engineering Intern · INEUDATA",
+    value: "40%",
+    description: "workflow automation via Kafka + Spark + Airflow ETL",
   },
   {
-    title: "education",
-    info: [
-      {
-        title: "B.TECH Artificial Intelligence and Data Science - Sri Eshwar College of Engineering",
-        stage: "2023 - 2027",
-      },
-      {
-        title: "HSC – JAWAHAR MAT. HR. SEC. SCHOOL (91.6%)",
-        stage: "2021 - 2023",
-      },
-      {
-        title: "SSLC - JAWAHAR MAT. HR. SEC. SCHOOL",
-        stage: "2020 - 2021",
-      },
-    ],
+    title: "LeetCode Knight",
+    value: "1866",
+    description: "Top 6% with 800+ solved and 70+ contests",
   },
   {
-    title: "experience",
-    info: [
-      { title: "Intern - G-Zoft Tech Solutions (MERN)", stage: "2025" },
-      { title: "Noiceless (PATENTED) - Motion Capture Tech", stage: "2024" },
-      { title: "Sketch Mentor - AI Agentic Math Solver", stage: "2025" },
-      { title: "HorixYt - AI Video Generation & Automation", stage: "2025" },
-      { title: "Yeildify - ML-Based Smart Farming System", stage: "2024" },
-      {
-        title: "ShopLens AI - E-Commerce Product Detection",
-        stage: "2025",
-      },
-      { title: "AItalytics - AI Data Science Platform", stage: "Present" },
-    ],
+    title: "Multi-Agent Architecture",
+    value: "8",
+    description: "autonomous agents orchestrated in JobStream",
   },
   {
-    title: "coding profiles",
-    info: [
-      {
-        title: "Leetcode",
-        stage: "360+ problems | Max Rating: 1,576 | Global Rank: 186,712",
-      },
-      { title: "Geeks For Geeks", stage: "55+ problems | Institute Rank: 96" },
-      {
-        title: "Codechef",
-        stage: "Max Rating: 1149 | Global Rank: 97,988",
-      },
-      {
-        title: "Skill Rack",
-        stage: "170+ problems | Top 18th in Contest | 53+ Bronzes",
-      },
-    ],
+    title: "YouTube Automation",
+    value: "95%",
+    description: "manual production effort reduced in HorixYt",
   },
+];
 
+const timelines = [
   {
-    title: "certifications",
-    info: [
-      {
-        title: "Programming in python for data science - IBM",
-        stage: "2024",
-      },
-      {
-        title: "Introduction to Artificial intelligence - IBM in coursera",
-        stage: "2024",
-      },
-      {
-        title: "Supervised Machine Learning: Regression and Classification - Stanford",
-        stage: "2024",
-      },
-      {
-        title: "Advanced Learning Algorithms - Stanford and Deeplearning",
-        stage: "2024",
-      },
-      {
-        title: "Data Structures and Algorithms - Udemy",
-        stage: "2024",
-      },
-      {
-        title: "Programming in C - NPTEL",
-        stage: "2024",
-      },
+    section: "Education",
+    items: [
+      "B.Tech AI & DS · Sri Eshwar College of Engineering · CGPA 8.34 (2023-2027)",
+      "HSC · Jawahar Matriculation HSS · 91.6% (2021-2023)",
+      "SSLC · Jawahar Matriculation HSS (2020-2021)",
+    ],
+  },
+  {
+    section: "Latest Experience & Projects",
+    items: [
+      "Data Engineering Intern at INEUDATA (2025)",
+      "JobStream · Autonomous AI job application platform (2025)",
+      "HorixYt · AI agentic YouTube generation pipeline (2025)",
+      "Big Data + AI Agents · real-time ETL dashboard (2025)",
+      "Sketch Mentor · AI math solver with QLoRA fine-tuning (2024)",
+    ],
+  },
+  {
+    section: "Certifications",
+    items: [
+      "Supervised ML: Regression & Classification · Stanford (2024)",
+      "Advanced ML Algorithms · Stanford (2024)",
+      "Data Structures and Algorithms Mastery · Udemy (2024)",
+      "Programming in C · NPTEL (2024)",
     ],
   },
 ];
 
-const About = () => {
-  const [index, setIndex] = useState(0);
+const techStack = [
+  { name: "Python", Icon: FaPython },
+  { name: "FastAPI", Icon: SiFastapi },
+  { name: "React", Icon: FaReact },
+  { name: "TensorFlow", Icon: SiTensorflow },
+  { name: "PyTorch", Icon: SiPytorch },
+  { name: "MongoDB", Icon: SiMongodb },
+  { name: "MySQL", Icon: SiMysql },
+  { name: "Docker", Icon: FaDocker },
+];
 
+const About = () => {
   return (
-    <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
+    <div className="min-h-screen bg-primary/30 py-28 xl:py-20 text-center xl:text-left overflow-y-auto xl:overflow-hidden">
       <Circles />
 
-      {/* avatar img */}
       <motion.div
         variants={fadeIn("right", 0.2)}
         initial="hidden"
@@ -153,126 +92,74 @@ const About = () => {
         <Avatar />
       </motion.div>
 
-      <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
-        {/* text */}
-        <div className="flex-1 flex flex-col justify-center">
-          <motion.h2
-            variants={fadeIn("right", 0.2)}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
-            className="h2"
-          >
-            Creating <span className="text-accent">innovative</span> solutions
-            with AI & Data Science.
-          </motion.h2>
-          <motion.p
-            variants={fadeIn("right", 0.4)}
-            initial="hidden"
-            animate="show"
-            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
-          >
-I’m an AI and Data Science enthusiast and Developing a project Horix AI—an agentic platform under development—driven to innovate with autonomous systems and smart tech solutions. With hands-on expertise in the MERN stack, machine learning, and AI, I’ve developed a patented 3D motion-capture pipeline, AI-driven video-generation tools, and intelligent smart-farming systems. I thrive on building impactful products that blend deep technical skills with entrepreneurial vision.          </motion.p>
+      <div className="container mx-auto relative z-10">
+        <div className="grid xl:grid-cols-[1.05fr,1fr] gap-8 items-start">
+          <motion.div variants={fadeIn("right", 0.25)} initial="hidden" animate="show" exit="hidden">
+            <h2 className="h2 mb-4">
+              Profile built for <span className="text-accent">recruiters</span>
+            </h2>
+            <p className="text-white/80 max-w-2xl mx-auto xl:mx-0 mb-6">
+              I am Harish R (age 20), an AI & Data Science undergraduate focused on production-ready systems. I build
+              autonomous multi-agent platforms, high-throughput ETL pipelines, and scalable backends with strong
+              engineering fundamentals.
+            </p>
 
-          {/* counters */}
-          <motion.div
-            variants={fadeIn("right", 0.6)}
-            initial="hidden"
-            animate="show"
-            className="hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8"
-          >
-            <div className="flex flex-1 xl:gap-x-6">
-            <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-              </div>
-              {/* leetcode */}
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={600} duration={5} />+
+            <div className="grid sm:grid-cols-2 gap-4 mb-6">
+              {highlights.map((item) => (
+                <div
+                  key={item.title}
+                  className="rounded-2xl border border-white/10 bg-[rgba(20,14,38,0.75)] backdrop-blur-sm p-4"
+                >
+                  <div className="text-2xl font-bold text-accent mb-1">
+                    {item.value.includes("%") ? (
+                      item.value
+                    ) : (
+                      <>
+                        <CountUp start={0} end={Number(item.value)} duration={2.5} />
+                        {item.value === "1866" ? "" : "+"}
+                      </>
+                    )}
+                  </div>
+                  <p className="text-sm font-semibold mb-1">{item.title}</p>
+                  <p className="text-xs text-white/70">{item.description}</p>
                 </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Leetcode Problems Solved
-                </div>
-              </div>
+              ))}
+            </div>
 
-              {/* projects */}
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={6} duration={5} />
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Major Projects Completed
-                </div>
+            <div className="rounded-2xl border border-white/10 bg-[rgba(16,12,30,0.82)] p-5">
+              <h3 className="text-lg font-semibold mb-3">Core Stack</h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                {techStack.map((item) => (
+                  <div
+                    key={item.name}
+                    className="flex items-center gap-2 rounded-lg px-3 py-2 border border-white/10 bg-white/5"
+                  >
+                    <item.Icon className="text-accent" aria-hidden />
+                    <span className="text-sm">{item.name}</span>
+                  </div>
+                ))}
               </div>
-
-              {/* skillrack */}
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={1700} duration={5} />+
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Contest Rating in leetcode
-                </div>
-              </div>
-              {/* certifications */}
-              <div className="relative flex-1">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={6} duration={5} />
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Professional Certifications
-                </div>
-              </div>
-              
             </div>
           </motion.div>
-        </div>
 
-        {/* info */}
-        <motion.div
-          variants={fadeIn("left", 0.4)}
-          initial="hidden"
-          animate="show"
-          exit="hidden"
-          className="flex flex-col w-full xl:max-w-[48%] h-[480px]"
-        >
-          <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
-            {aboutData.map((item, itemI) => (
+          <motion.div variants={fadeIn("left", 0.3)} initial="hidden" animate="show" exit="hidden" className="space-y-4">
+            {timelines.map((block) => (
               <div
-                key={itemI}
-                className={`${
-                  index === itemI &&
-                  "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
-                } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
-                onClick={() => setIndex(itemI)}
+                key={block.section}
+                className="rounded-2xl border border-white/10 bg-[rgba(20,14,38,0.75)] backdrop-blur-sm p-5"
               >
-                {item.title}
-              </div>
-            ))}
-          </div>
-
-          <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
-            {aboutData[index].info.map((item, itemI) => (
-              <div
-                key={itemI}
-                className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-center text-white/60"
-              >
-                {/* title */}
-                <div className="font-light mb-2 md:mb-0">{item.title}</div>
-                <div className="hidden md:flex">-</div>
-                <div>{item.stage}</div>
-
-                <div className="flex gap-x-4">
-                  {/* icons */}
-                  {item.icons?.map((Icon, iconI) => (
-                    <div key={iconI} className="text-2xl text-white">
-                      <Icon />
-                    </div>
+                <h3 className="text-lg font-semibold mb-3 text-accent">{block.section}</h3>
+                <ul className="space-y-2 text-sm text-white/80">
+                  {block.items.map((entry) => (
+                    <li key={entry} className="pl-4 relative before:content-[''] before:w-2 before:h-2 before:bg-accent before:rounded-full before:absolute before:left-0 before:top-2">
+                      {entry}
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
             ))}
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
     </div>
   );
